@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color:#17A589 ;
+  padding: 1px;
+  text-align: center;
+  font-size: 35px;
+  font-style: italic;
+  color: hotblue;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #F7F9F9 ;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #7FFFD4;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color:#17A589;
+  padding: 10px;
+  text-align: center;
+  font-style: italic;
+  font-size:20px;
+  color: orange;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #1ABC9C ;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+ li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Botanical Garden</h2>
+</header>
+
+<section>
+<nav>
+    <ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#address">Address</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</nav>
+  
+  <article>
+    <h1>OOTY</h1>
+    <p>Ootacamund abbreviated as Udhagai and popularly known as Ooty,renamed to un-anglicised former name Udagamandalam (Tamil: உதகமண்டலம்), is a town and a municipality in the Niligiris District of the Indian State of Tamil Nadu. It is located 86 km north of Coimbatore and 128 km south of Mysore and is the headquarters of the Nilgiris district.
+     It is a popular hill station located in the Nilgiri Hills.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Happy Journey</p>
+</footer>
+
+</body>
+</html>

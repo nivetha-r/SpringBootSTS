@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var array =new Array (90,10,30,40,5);
+ for(var i=0;i<array.length;i++){
+	 for(var j=i+1;j<array.length;j++){
+		 if(Num(array[i]) > Num(array[j])){
+			 tempvalue=array[j];
+			 array[j]=array[i];
+			 array[i]=tempvalue;
+		 }
+	 }
+ }
+ document.write(array);
+
+</script><br/><br/>
+<script>
+var a=[90,10,30,40,5];
+a.splice(1,2,99);
+document.write(a);
+</script><br/><br/>
+
+<script>
+var a=[90,10,30,40,5];
+a.unshift(99);
+document.write(a);
+</script>
+
+<script>
+var array=[1,2,3];
+var newarray=array.map(function(element) {
+	return element*2;
+});
+document.write(newarray);
+</script>
+
+</body>
+</html>
